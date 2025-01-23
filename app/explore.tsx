@@ -3,22 +3,19 @@ import React from "react";
 import { StyleSheet, View } from "react-native";
 import { Button, Text } from "react-native-paper";
 
-export default function HomeScreen() {
+export default function Explore() {
   return (
     <>
       <View style={styles.container}>
-        <Text variant="headlineMedium">Index!</Text>
-        <Button
+        <Text variant="headlineMedium">Explore!</Text>
+        <Button 
           style={styles.button} 
           icon="camera" 
           mode="contained"
-          onPress={() => router.push("/explore")}
+          onPress={() => router.push("/")}
         >
-          Go Explore
+          Go Home
         </Button>
-        <Link href="/explore" style={styles.button}>
-        Go to About screen
-      </Link>
       </View>
     </>
   );
