@@ -3,11 +3,11 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Button, Text } from 'react-native-paper';
 
-export default function Explore() {
+export default function Profile() {
   return (
     <>
       <View style={styles.container}>
-        <Text variant='headlineMedium'>Explore!</Text>
+        <Text variant='headlineMedium'>Profile!</Text>
         <Button
           style={styles.button}
           icon='camera'

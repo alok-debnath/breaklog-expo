@@ -1,25 +1,20 @@
-import { Link, router } from 'expo-router';
+import { router } from 'expo-router';
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Button, Text } from 'react-native-paper';
 
-export default function HomeScreen() {
+export default function History() {
   return (
     <>
       <View style={styles.container}>
-        <Text variant='headlineMedium'>Index!</Text>
+        <Text variant='headlineMedium'>History!</Text>
         <Button
           style={styles.button}
           icon='camera'
           mode='contained'
-          onPress={() => router.push('/profile')}>
-          Go Explore
+          onPress={() => router.push('/')}>
+          Go Home
         </Button>
-        <Link
-          href='/profile'
-          style={styles.button}>
-          Go to About screen
-        </Link>
       </View>
     </>
   );

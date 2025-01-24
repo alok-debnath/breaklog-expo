@@ -4,9 +4,10 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { BottomNavigation, MD3DarkTheme, MD3LightTheme, PaperProvider } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import HomeScreen from './index';
-import Explore from './explore';
 import { useColorScheme } from 'react-native';
 import { useMaterial3Theme } from '@pchmn/expo-material3-theme';
+import Profile from './profile';
+import History from './history';
 
 const Tab = createBottomTabNavigator();
 
@@ -26,12 +27,12 @@ export default function RootLayout() {
   const SCREEN_CONFIG = [
     {
       name: 'History',
-      component: Explore,
+      component: History,
       options: {
         tabBarLabel: 'History',
         tabBarIcon: ({ color, size }: { color: string; size: number }) => (
           <Icon
-            name='cog'
+            name='history'
             size={size}
             color={color}
           />
@@ -54,12 +55,12 @@ export default function RootLayout() {
     },
     {
       name: 'explore',
-      component: Explore,
+      component: Profile,
       options: {
-        tabBarLabel: 'Explore',
+        tabBarLabel: 'Profile',
         tabBarIcon: ({ color, size }: { color: string; size: number }) => (
           <Icon
-            name='cog'
+            name='face-man-shimmer'
             size={size}
             color={color}
           />
